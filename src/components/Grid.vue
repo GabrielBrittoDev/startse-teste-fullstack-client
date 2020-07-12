@@ -1,12 +1,23 @@
 <template>
-    <v-container>
+        <v-container>
+            <v-row no-gutters>
+                <v-col
+                        v-for="item in courses"
+                        :key="item.id"
+                        cols="12"
+                        sm="3"
+                        md="3"
 
-        <button @click="doa">a</button>
+                >
+                    <card :course="item"> </card>
+                </v-col>
+            </v-row>
+        </v-container>
 
-    </v-container>
 </template>
 
 <script>
+    import axios from 'axios';
     import Card from "./Card";
     export default {
         name: "Grid",
@@ -15,38 +26,17 @@
             },
         data (){
             return {
-                items: [
-                    { message: 'Algo' },
-                    { message: 'Outro' }
-                ],
-                courses: [
-                    {
-                        id: 3,
-                        title: 'dw',
-                    },
-                    {
-                        id: 4,
-                        title: 'dw',
-                    },
-                    {
-                        id: 5,
-                        title: 'dw',
-                    },
-                    {
-                        id: 6,
-                        title: 'dw',
-                    }
-                ]
+                courses: {}
             }
         },
         methods: {
-            doa(){
-                  this.courses.push({'id' : this.courses.length + 82, 'title':'dopopdoaw'});
-                console.log(this.courses)
-            },
+
         },
         mounted() {
-            console.log(this.courses);
+            axios.get('http://localhost:8000/courses')
+            .then((response) => {
+                this.courses = response.data.data;
+            });
         }
     }
 </script>

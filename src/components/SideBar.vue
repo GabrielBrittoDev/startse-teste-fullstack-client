@@ -1,9 +1,9 @@
 <template>
       <v-navigation-drawer
               :color="color"
-              expand-on-hover
-              relative
               permanent
+              mini-variant
+              height="100vh"
       >
         <v-list
                 nav
