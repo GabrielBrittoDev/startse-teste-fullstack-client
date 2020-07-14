@@ -9,11 +9,16 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
     "core-js": "^3.6.5",
+    "jw-vue-pagination": "^1.0.3",
+    "lodash": "^4.17.19",
+    "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.6.11",
     "vue-js-grid": "^1.0.1",
     "vue-masonry": "^0.11.8",
     "vue-masonry-css": "^1.0.3",
+    "vue-toastr": "^2.1.2",
     "vuetify": "^2.3.4"
   },
   "devDependencies": {

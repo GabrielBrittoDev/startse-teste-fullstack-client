@@ -1,29 +1,25 @@
 <template>
   <v-app>
-    <v-row>
-      <side-bar></side-bar>
-      <grid></grid>
-    </v-row>
 
+    <grid>
 
+    </grid>
 
 
   </v-app>
 </template>
 
 <script>
-  import SideBar from "./components/SideBar";
-import Grid from "./components/Grid";
-export default {
-  name: 'App',
+  import Grid from "./components/Grid";
+  export default {
+    name: 'App',
 
-  components: {
-    Grid,
-    SideBar
-  },
+    components: {
+      Grid
+    },
 
-  data: () => ({
-    //
-  }),
-};
+    data: () => ({
+      //
+    }),
+  };
 </script>
